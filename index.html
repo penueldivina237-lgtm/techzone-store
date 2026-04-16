@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TechZone Store</title>
+  <meta name="description" content="TechZone Store — products, cart, and checkout UI demo." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="assets/js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="./">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>
+          <strong>TechZone Store</strong>
+          <span>Gear that upgrades your day</span>
+        </span>
+      </a>
+
+      <nav class="nav" data-nav aria-label="Primary">
+        <a href="./" aria-current="page">Home</a>
+        <a href="pages/products/">Products</a>
+        <a href="pages/cart/">Cart <span class="badge" data-cart-count>0</span></a>
+        <a href="pages/checkout/">Checkout</a>
+      </nav>
+
+      <div class="actions">
+        <button class="icon-btn nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-label="Open menu">Menu</button>
+        <a class="btn btn-primary" href="pages/products/">Shop now</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="card">
+          <span class="kicker">Featured deals • Limited time</span>
+          <h1>Shop smart tech with clean UI.</h1>
+          <p class="lead">Filters, product modal, and a real cart flow powered by localStorage.</p>
+          <div class="cta">
+            <a class="btn btn-primary" href="pages/products/">Browse products</a>
+            <a class="btn btn-ghost" href="pages/cart/">View cart</a>
+          </div>
+        </div>
+
+        <aside class="card">
+          <h2 style="margin:0">Why this build</h2>
+          <p class="lead">A portfolio-ready e-commerce demo.</p>
+          <div class="grid" style="margin-top:12px">
+            <div class="product"><h3>Cart counter</h3><p>Updates instantly in the navbar.</p></div>
+            <div class="product"><h3>LocalStorage cart</h3><p>Cart persists even after refresh.</p></div>
+            <div class="product"><h3>Checkout UI</h3><p>Test mode submission (no payments).</p></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Featured deals</h2>
+            <p class="lead">Quick add to cart + quick view modal.</p>
+          </div>
+          <a class="btn btn-ghost" href="pages/products/">All products</a>
+        </div>
+        <div class="grid grid-3" data-featured></div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Contact</h2>
+            <p class="lead">Support-style contact form (no backend).</p>
+          </div>
+        </div>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3 style="margin:0 0 6px">Store info</h3>
+            <p class="lead" style="margin:0">Demo storefront.</p>
+            <div style="height:10px"></div>
+            <p class="small">Email: <a href="mailto:Emmanuel@globalix-inc.com">Emmanuel@globalix-inc.com</a> • Hours: 9am–5pm</p>
+          </div>
+          <div class="card">
+            <h3 style="margin:0 0 6px">Send a message</h3>
+            <form class="grid" onsubmit="event.preventDefault(); alert('Message sent (demo).'); this.reset();">
+              <label class="small">Name<input style="width:100%;margin-top:6px" class="icon-btn" name="name" required></label>
+              <label class="small">Email<input style="width:100%;margin-top:6px" class="icon-btn" type="email" name="email" required></label>
+              <label class="small">Message<textarea style="width:100%;margin-top:6px;min-height:110px" class="icon-btn" name="message" required></textarea></label>
+              <button class="btn btn-primary" type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="notice" data-toast aria-hidden="true" role="status"></div>
+
+    <div class="modal-backdrop" data-modal-backdrop aria-hidden="true" role="dialog" aria-label="Product quick view">
+      <div class="modal">
+        <div class="modal-header">
+          <div class="modal-title" data-modal-title>Product</div>
+          <button class="icon-btn" type="button" data-close-modal aria-label="Close">Close</button>
+        </div>
+        <div data-modal-body></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <div>
+          <div style="font-weight:950">TechZone Store</div>
+          <div class="small">E-commerce UI demo</div>
+        </div>
+        <div class="footer-links" aria-label="Footer">
+          <a href="pages/products/">Products</a>
+          <a href="pages/cart/">Cart</a>
+          <a href="pages/checkout/">Checkout</a>
+        </div>
+      </div>
+      <div class="small">© <span data-year></span> TechZone • Front-end demo</div>
+    </div>
+  </footer>
+</body>
+</html>
