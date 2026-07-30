@@ -1,2 +1,3 @@
-# techzone-store
-techzone-store
+# TechZone Store
+
+TechZone Store repository.
